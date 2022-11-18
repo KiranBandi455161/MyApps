@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_margin="30dp"
+    >
+
+    <!--edit text for our course name-->
+
+
+    <EditText
+        android:id="@+id/tabName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:hint="Enter Tab Name" />
+
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:text="Update"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAllCaps="false"
+        android:fontFamily="@font/play_bold"/>
+
+
+</LinearLayout>

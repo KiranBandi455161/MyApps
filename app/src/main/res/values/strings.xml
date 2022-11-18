@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">Sri Infotech</string>
+    <string name="enter_title_name">Enter Title Name</string>
+    <string name="vehicles_amp_count"><![CDATA[Vehicles & Count]]></string>
+    <string name="timing_list">Timing List</string>
+  <string name="permissions_req">Please enable all the required permissions to proceed further.</string>
+</resources>

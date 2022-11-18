@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/homepage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:text="Home"
+        android:drawableEnd="@drawable/ic_baseline_home_24"
+        tools:ignore="DuplicateIds">
+
+    </Button>
+
+    <Button
+        android:id="@+id/saveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="Save"
+        tools:ignore="DuplicateIds">
+
+    </Button>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_below="@+id/saveData"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="#DFB300"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="NotSibling,UnknownId">
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.7"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/play_bold"
+            android:text="@string/vehicles_amp_count"/>
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3">
+
+            <ImageView
+                android:id="@+id/gridButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/menu" />
+
+            <ImageView
+                android:id="@+id/lineargrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/dot_menu"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonslinear"
+        android:layout_below="@+id/linear" />
+
+    <!--fab to add new courses-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addVehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="73dp"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/buttonslinear"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/yash"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:text="Reset">
+
+        </Button>
+
+        <Button
+            android:id="@+id/savedVehicleList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:text="Saved vehicles">
+
+        </Button>
+
+    </LinearLayout>
+</RelativeLayout>
